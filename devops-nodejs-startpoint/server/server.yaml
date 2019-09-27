@@ -12,8 +12,13 @@ metadata:
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
+  selector:
+    matchLabels:
+      app: devops-server
   template:
     metadata:
+      labels:
+        app: devops-server  
     spec:
       containers:
       - image: gcr.io/devopssample-253918/newserver:$BUILD_NUMBER
