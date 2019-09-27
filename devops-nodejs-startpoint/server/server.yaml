@@ -21,6 +21,7 @@ spec:
         app: devops-server  
     spec:
       containers:
+      - name: devops-server
       - image: gcr.io/devopssample-253918/newserver:$BUILD_NUMBER
         resources: {} 
  
